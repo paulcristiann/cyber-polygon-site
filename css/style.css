@@ -661,45 +661,6 @@ h1, h2, h3, h4 {
   background: linear-gradient(135deg, var(--cyan-400), var(--blue-500));
 }
 
-.event-body > .event-audience {
-  margin-top: 22px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(148, 163, 184, .16);
-  font-size: 13.5px;
-  color: #94a3b8;
-}
-.event-audience strong { color: #e2e8f0; font-weight: 600; }
-
-.event-feedback {
-  margin-top: 24px;
-  padding: 20px 22px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(59, 130, 246, .12), rgba(34, 211, 238, .06));
-  border: 1px solid rgba(96, 165, 250, .25);
-}
-.event-feedback-title {
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: #93c5fd;
-  margin-bottom: 14px;
-}
-.event-feedback-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-.event-feedback-grid > div { display: grid; gap: 4px; align-content: start; }
-.event-feedback-value {
-  font-family: var(--font-display);
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--cyan-400);
-}
-.event-feedback-label { font-size: 12.5px; color: #94a3b8; line-height: 1.45; }
-
 /* Lightbox */
 .lightbox {
   margin: auto;
@@ -935,7 +896,6 @@ h1, h2, h3, h4 {
   .benefits { padding: 26px 22px; }
   .partner-grid, .contact-grid { grid-template-columns: 1fr; }
   .events-stats { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; padding: 24px 18px; margin-bottom: 56px; }
-  .event-feedback-grid { grid-template-columns: 1fr; gap: 14px; }
   .event-media, .event-reverse .event-media { padding: 0 0 18% 0; }
   .event-photo-inset, .event-reverse .event-photo-inset { width: 52%; right: 0; left: auto; }
   .timeline::before { left: 19px; }
