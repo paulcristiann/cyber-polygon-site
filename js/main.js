@@ -49,3 +49,27 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => sectionObserver.observe(section));
+
+// Event photo lightbox
+const lightbox = document.getElementById('lightbox');
+
+if (lightbox) {
+  const lightboxImg = lightbox.querySelector('img');
+  const lightboxCaption = lightbox.querySelector('figcaption');
+
+  document.querySelectorAll('[data-lightbox]').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      lightboxImg.src = trigger.dataset.lightbox;
+      lightboxImg.alt = trigger.querySelector('img')?.alt ?? '';
+      lightboxCaption.textContent = trigger.dataset.caption ?? '';
+      lightbox.showModal();
+    });
+  });
+
+  lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+
+  // Close when clicking the backdrop (outside the figure)
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.close();
+  });
+}
